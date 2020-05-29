@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinContacts.ContactPage">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Padding="0,0,0,100" BackgroundColor="LightPink">
+                <Label Text="Имя" TextColor="Black" FontSize="Title" />
+                <Entry Text="{Binding Name}" Placeholder="Введите имя" TextColor="Black" FontSize="Title"/>
+                <Label Text="Важность" TextColor="Black" FontSize="Title"/>
+                <Entry Text="{Binding Importance}" Placeholder="Укажите важность контакта" TextColor="Black" FontSize="Title"/>
+                <Label Text="Телефон"  TextColor="Black" FontSize="Title"/>
+                <Entry Text="{Binding Phone}" Placeholder="Введите номер телефона"
+                       Keyboard="Telephone" TextColor="Black" FontSize="Title"/>
+                <Label Text="Email" TextColor="Black" FontSize="Title"/>
+                <Entry Text="{Binding Email}" Placeholder="Введите адрес почты"
+                       Keyboard="Email" TextColor="Black" FontSize="Title"/>
+                <StackLayout BackgroundColor="LightPink">
+                    <Button Text="&#xf00c;"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+        Clicked="SaveButton_Clicked" BackgroundColor="PaleVioletRed"/>
+                    <Button Text="&#xf1f8;"
+                            FontFamily="{StaticResource FontAwesomeSolid}"  
+        Clicked="DeleteButton_Clicked" BackgroundColor="PaleVioletRed"/>
+                    <Button Text="&#xf095;"
+                            FontFamily="{StaticResource FontAwesomeSolid}"  
+        Clicked="MakePhoneCall" BackgroundColor="PaleVioletRed"/>
+                    <Button Text="&#xf7cd;"
+                            FontFamily="{StaticResource FontAwesomeSolid}"  
+        Clicked="SendMessage" BackgroundColor="PaleVioletRed"/>
+                    <Button Text="&#xf0e0;"
+                            FontFamily="{StaticResource FontAwesomeRegular}" 
+        Clicked="SendEmail" BackgroundColor="PaleVioletRed"/>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

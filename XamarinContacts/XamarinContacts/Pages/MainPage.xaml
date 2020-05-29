@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinContacts.MainPage"
+             Title="Контакты">
+
+    <StackLayout BackgroundColor="LightPink">
+        <ListView ItemsSource="{Binding}" 
+                  ItemSelected="ListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+
+                            <StackLayout BackgroundColor="LightPink">
+                                <Label Text="{Binding Name}" FontSize="Medium"/>
+                            </StackLayout>
+
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="&#xf234;" FontFamily="{StaticResource FontAwesomeSolid}"
+                Clicked="AddContact_Clicked" BackgroundColor="PaleVioletRed"/>
+    </StackLayout>
+
+</ContentPage>
